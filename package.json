@@ -1,0 +1,22 @@
+
+{
+  "name": "react-native-microscope",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native", "microscope"
+  ],
+  "author": "",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.60.4"
+
+  },
+  "devDependencies": {
+    "react-native": "0.60.4"
+  }  
+}
