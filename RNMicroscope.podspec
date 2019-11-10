@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNMicroscope"
-  s.version      = "1.0.2"
+  s.version      = "1.0.4"
   s.summary      = "RNMicroscope"
   s.description  = "Connect to Digital microscope"
   s.homepage     = "https://github.com/tranhanhieu"
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author             = { "author" => "author@domain.cn" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/TranHanHieu/react-native-microscope.git", :tag => "master" }
-  s.source_files  = "RNMicroscope/**/*.{h,m}"
+  s.source_files  = "ios/**/*.{h,m}"
   s.requires_arc = true
 
 

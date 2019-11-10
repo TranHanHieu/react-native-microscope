@@ -507,6 +507,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/../node_modules/react-native-microscope/ios/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,6 +534,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/../node_modules/react-native-microscope/ios/Frameworks",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

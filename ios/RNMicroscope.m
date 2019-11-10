@@ -7,24 +7,21 @@
 #import <React/RCTViewManager.h>
 #import <React/RCTUIManager.h>
 @implementation RNMicroscope
-
+RCT_EXPORT_MODULE()
 - (dispatch_queue_t)methodQueue
 {
     return dispatch_get_main_queue();
 }
-
-@end
-@implementation RCT_EXTERN_MODULE(RCTOpenGLViewManager, RCTViewManager)
- 
-@end
-
-@implementation RCT_EXTERN_MODULE(JHCameraManager, NSObject)
-
+- (UIView *) view
+{
+    JH_OpenGLView * openGLViewManager;
+    openGLViewManager = [[JH_OpenGLView alloc] init];
+    return openGLViewManager;
+}
 RCT_EXTERN_METHOD(addEvent)
 RCT_EXTERN_METHOD(naInit)
 RCT_EXTERN_METHOD(naPlay:(JH_OpenGLView*)playView)
 RCT_EXTERN_METHOD(snapPhoto)
 RCT_EXTERN_METHOD(naConnected)
-
 @end
 

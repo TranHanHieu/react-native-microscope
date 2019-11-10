@@ -1,11 +1,3 @@
-//
-//  JHOpenGLView.swift
-//  JHApp
-//
-//  Created by Doan Tuan on 11/7/19.
-//  Copyright © 2019 Facebook. All rights reserved.
-//
-
 import Foundation
 import JavaScriptCore
 
