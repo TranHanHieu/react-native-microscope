@@ -10,24 +10,42 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "25.0.0"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-    ndk {
-            abiFilters "armeabi-v7a", "x86"
+                testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters 'armeabi-v7a','arm64-v8a'
         }
     }
         compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -38,7 +56,7 @@ repositories {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.facebook.react:react-native:+'
 
     compileOnly 'com.android.support:appcompat-v7:28.0.0'
@@ -46,3 +64,12 @@ dependencies {
     compileOnly 'org.tensorflow:tensorflow-android:1.13.1'
 }
   
+publish {
+    userOrg = 'aivenlau'//bintray.com用户名
+    groupId = 'com.Joyhonest'//jcenter上的路径
+    artifactId = 'Wifi_Camera'//项目名称
+    publishVersion = '3.6.0'//版本号 3.0.0 后支持 arm64
+    desc = 'This is for JH WifiCamera'//描述，不重要
+    website = 'https://github.com/aivenlau/Wifi_Camera'//网站，最好有，不重要
+
+}

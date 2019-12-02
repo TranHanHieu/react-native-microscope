@@ -1,3 +1,3 @@
-var { requireNativeComponent, PropTypes } = require('react-native');
+var { requireNativeComponent, PropTypes, Platform } = require('react-native');
 
-module.exports = requireNativeComponent('RNMicroscopeView');
+module.exports = requireNativeComponent(Platform.OS == 'ios' ? 'RNMicroscope' : 'RNMicroscopeView');

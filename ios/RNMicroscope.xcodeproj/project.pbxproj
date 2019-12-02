@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		679242BE2377AB7E00412E71 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6792429F2377AB6A00412E71 /* libReact.a */; };
-		679242C42377AC5700412E71 /* JHCameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679242C02377AC5700412E71 /* JHCameraManager.swift */; };
-		679242C52377AC5700412E71 /* JHOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 679242C12377AC5700412E71 /* JHOpenGLView.m */; };
-		679242C62377AC5700412E71 /* JHCameraManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 679242C22377AC5700412E71 /* JHCameraManagerBridge.m */; };
-		679242C72377AC5700412E71 /* JHOpenGLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679242C32377AC5700412E71 /* JHOpenGLView.swift */; };
 		679242CD2377AE6F00412E71 /* JH_Libary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679242CC2377AE6E00412E71 /* JH_Libary.framework */; };
 		679242CE2377AEB800412E71 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679242CA2377ADB200412E71 /* JavaScriptCore.framework */; };
+		6797CC8423951D1E00C5F3BA /* JH_Libary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797CC8323951D1E00C5F3BA /* JH_Libary.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNMicroscope.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNMicroscope.m */; };
 /* End PBXBuildFile section */
 
@@ -147,13 +144,9 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNMicroscope.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMicroscope.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		6792428B2377AB6A00412E71 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		679242BF2377AC5600412E71 /* RNMicroscope-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RNMicroscope-Bridging-Header.h"; sourceTree = "<group>"; };
-		679242C02377AC5700412E71 /* JHCameraManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHCameraManager.swift; sourceTree = "<group>"; };
-		679242C12377AC5700412E71 /* JHOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHOpenGLView.m; sourceTree = "<group>"; };
-		679242C22377AC5700412E71 /* JHCameraManagerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHCameraManagerBridge.m; sourceTree = "<group>"; };
-		679242C32377AC5700412E71 /* JHOpenGLView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JHOpenGLView.swift; sourceTree = "<group>"; };
 		679242CA2377ADB200412E71 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		679242CC2377AE6E00412E71 /* JH_Libary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JH_Libary.framework; path = Frameworks/JH_Libary.framework; sourceTree = "<group>"; };
+		6797CC8323951D1E00C5F3BA /* JH_Libary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JH_Libary.framework; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNMicroscope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMicroscope.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNMicroscope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMicroscope.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +159,7 @@
 				679242CE2377AEB800412E71 /* JavaScriptCore.framework in Frameworks */,
 				679242BE2377AB7E00412E71 /* libReact.a in Frameworks */,
 				679242CD2377AE6F00412E71 /* JH_Libary.framework in Frameworks */,
+				6797CC8423951D1E00C5F3BA /* JH_Libary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,13 +177,9 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				679242C02377AC5700412E71 /* JHCameraManager.swift */,
-				679242C22377AC5700412E71 /* JHCameraManagerBridge.m */,
-				679242C12377AC5700412E71 /* JHOpenGLView.m */,
-				679242C32377AC5700412E71 /* JHOpenGLView.swift */,
+				6797CC8323951D1E00C5F3BA /* JH_Libary.framework */,
 				B3E7B5881CC2AC0600A0062D /* RNMicroscope.h */,
 				B3E7B5891CC2AC0600A0062D /* RNMicroscope.m */,
-				679242BF2377AC5600412E71 /* RNMicroscope-Bridging-Header.h */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				6792428A2377AB6A00412E71 /* Frameworks */,
 			);
@@ -407,11 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				679242C42377AC5700412E71 /* JHCameraManager.swift in Sources */,
-				679242C62377AC5700412E71 /* JHCameraManagerBridge.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNMicroscope.m in Sources */,
-				679242C52377AC5700412E71 /* JHOpenGLView.m in Sources */,
-				679242C72377AC5700412E71 /* JHOpenGLView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
