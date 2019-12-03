@@ -5,8 +5,8 @@
 #import <React/RCTLog.h>
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
-#import "JH_Libary/JH_OpenGLView.h"
-#import "JH_Libary/JH_WifiCamera.h"
+#import "JH_OpenGLView.h"
+#import "JH_WifiCamera.h"
 
 
 @implementation RNMicroscope

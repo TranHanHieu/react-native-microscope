@@ -2,8 +2,10 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBridgeModule.h>
 #import <AVFoundation/AVFoundation.h>
-#import "JH_Libary/JH_OpenGLView.h"
-#import "JH_Libary/JH_WifiCamera.h"
+#import "JH_OpenGLView.h"
+#import "JH_WifiCamera.h"
+// #import "JH_Libary/JH_OpenGLView.h"
+// #import "JH_Libary/JH_WifiCamera.h"
 
 @class RNMicroscope;
 

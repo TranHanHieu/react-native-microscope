@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		679242BE2377AB7E00412E71 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6792429F2377AB6A00412E71 /* libReact.a */; };
-		679242CD2377AE6F00412E71 /* JH_Libary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679242CC2377AE6E00412E71 /* JH_Libary.framework */; };
 		679242CE2377AEB800412E71 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 679242CA2377ADB200412E71 /* JavaScriptCore.framework */; };
 		6797CC8423951D1E00C5F3BA /* JH_Libary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6797CC8323951D1E00C5F3BA /* JH_Libary.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNMicroscope.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNMicroscope.m */; };
@@ -158,7 +157,6 @@
 			files = (
 				679242CE2377AEB800412E71 /* JavaScriptCore.framework in Frameworks */,
 				679242BE2377AB7E00412E71 /* libReact.a in Frameworks */,
-				679242CD2377AE6F00412E71 /* JH_Libary.framework in Frameworks */,
 				6797CC8423951D1E00C5F3BA /* JH_Libary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

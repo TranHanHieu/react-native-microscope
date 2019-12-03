@@ -1,0 +1,6 @@
+framework module JH_Libary {
+  umbrella header "JH_Libary.h"
+
+  export *
+  module * { export * }
+}
