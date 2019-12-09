@@ -1,22 +1,23 @@
-
 {
   "name": "react-native-microscope",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native", "microscope", "wifi", "wifi camera"
+    "react-native",
+    "microscope",
+    "wifi",
+    "wifi camera"
   ],
   "author": "",
   "license": "",
   "peerDependencies": {
     "react-native": "^0.60.4"
-
   },
   "devDependencies": {
     "react-native": "0.60.4"
-  }  
+  }
 }

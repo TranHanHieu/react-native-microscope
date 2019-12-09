@@ -32,7 +32,6 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <View style={{flex: 1}}>
         <RNMicroscopeView style={{flex: 1, width: '100%', height: '100%'}} />
-        {/* <Text onPress={() => RNWifiCam.show('hihi')}>Button</Text> */}
       </View>
     </>
   );

@@ -2,12 +2,20 @@
 # react-native-microscope
 
 ## Getting started
+`$ yarn add react-native-microscope`
+`$ yarn add react-native-view-shot`
 
-`$ npm install react-native-microscope --save`
+# RN >= 0.60
+iOS:
+1. add pod 'RNMicroscope', :path => '../node_modules/react-native-microscope' in Podfile.
+2. cd ios && pod install
+3. Click on project General tab
+4. Under Embedded Binaries click + and add JH_Libary.framework
 
 ### Mostly automatic installation
 
 `$ react-native link react-native-microscope`
+
 
 ### Manual installation
 
@@ -34,20 +42,23 @@
       compile project(':react-native-microscope')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNMicroscope.sln` in `node_modules/react-native-microscope/windows/RNMicroscope.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Microscope.RNMicroscope;` to the usings at the top of the file
-  - Add `new RNMicroscopePackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
 ## Usage
 ```javascript
 import RNMicroscope from 'react-native-microscope';
 
-// TODO: What to do with the module?
-RNMicroscope;
+return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <View style={{ flex: 1 }}>
+        <RNMicroscopeView style={{ flex: 1, width: '100%', height: '100%' }} />
+      </View>
+    </>
+);
 ```
-  
+
+## Props
+- **`onCapture`** _(Function)_ - return base64 or uri
+- **`style`** _(Object)_ - style container
+- **`styleMicroscope`** _(Object)_ - style camera view
+- **`buttonCaptureComponent`** _(Component)_ - button capture
+- **`optionFormat`** _(Object)_ - option format image, default is `{ format: "png", quality: 0.9 }`
