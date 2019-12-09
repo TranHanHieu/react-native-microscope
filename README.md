@@ -44,7 +44,7 @@ iOS:
 
 ## Usage
 ```javascript
-import RNMicroscope from 'react-native-microscope';
+import RNMicroscopeView from 'react-native-microscope';
 
 return (
     <>
