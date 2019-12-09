@@ -21,38 +21,51 @@ import ViewShot from "react-native-view-shot";
 const RNMicroscopeView = requireNativeComponent(
   Platform.OS == "ios" ? "RNMicroscope" : "RNMicroscopeView"
 );
+
 class MicroscopeView extends Component {
   _onCapture = () => {
-    const { onCapture } = this.props;
-    this.refs.viewShot.capture().then(uri => {
-      if (onCapture) onCapture(uri);
-    });
+    const { onCaptureSuccess, onStartCapture, onCaptureError } = this.props;
+    onStartCapture && onStartCapture();
+    this.refs.viewShot
+      .capture()
+      .then(uri => {
+        if (onCaptureSuccess) onCaptureSuccess(uri);
+      })
+      .catch(e => onCaptureError && onCaptureError(e));
   };
+
+  _renderButtonCapture() {
+    const { buttonCaptureComponent } = this.props;
+    return (
+      buttonCaptureComponent ? (
+        buttonCaptureComponent
+      ) : (
+        <TouchableOpacity onPress={this._onCapture}>
+          <View style={styles.buttonCapture}>
+            <Text>Capture</Text>
+          </View>
+        </TouchableOpacity>
+      )
+    )
+  }
 
   render() {
     const {
       style,
-      buttonCaptureComponent,
       styleMicroscope,
       optionFormat = { format: "png", quality: 0.9 }
     } = this.props;
     return (
-      <ViewShot
-        ref="viewShot"
-        options={optionFormat}
-        style={[styles.container, style]}
-      >
-        <RNMicroscopeView style={[styles.microscope, styleMicroscope]} />
-        <TouchableOpacity onPress={this._onCapture}>
-          {buttonCaptureComponent ? (
-            buttonCaptureComponent
-          ) : (
-            <View style={styles.buttonCapture}>
-              <Text>Capture</Text>
-            </View>
-          )}
-        </TouchableOpacity>
-      </ViewShot>
+      <View style={[styles.container, style]}>
+        <ViewShot
+          ref="viewShot"
+          options={optionFormat}
+          style={styles.container}
+        >
+          <RNMicroscopeView style={[styles.microscope, styleMicroscope]} />
+        </ViewShot>
+        {this._renderButtonCapture()}
+      </View>
     );
   }
 }
