@@ -21,12 +21,20 @@ RCT_EXPORT_VIEW_PROPERTY(onCameraReady, RCTDirectEventBlock);
 
 - (UIView *)view
 {
-    self.cameraView = [[JH_OpenGLView alloc] init];
-    self.cameraManager = [[JH_WifiCamera alloc] init];
-    [self.cameraManager naInit:@"2"];
-    [self.cameraManager naStartReadUdp:20001];
-    [self.cameraManager naPlay:@"2" ImageView:self.cameraView];
-    return self.cameraView;
+    #if TARGET_IPHONE_SIMULATOR
+    NSString *hello = @"Hello, iPhone simulator!";
+    return [[UIView alloc] init];
+    #elif TARGET_OS_IPHONE
+        self.cameraView = [[JH_OpenGLView alloc] init];
+        self.cameraManager = [[JH_WifiCamera alloc] init];
+        [self.cameraManager naInit:@"2"];
+        [self.cameraManager naStartReadUdp:20001];
+        [self.cameraManager naPlay:@"2" ImageView:self.cameraView];
+        return self.cameraView;
+    #else
+    NSString *hello = @"Hello, unknown target!";
+    return [[UIView alloc] init];
+    #endif
 }
 
 - (NSDictionary *)constantsToExport
