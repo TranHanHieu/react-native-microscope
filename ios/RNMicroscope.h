@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger, RNTypeSnapRec) {
 @interface RNMicroscope : RCTViewManager <RCTBridgeModule>
 @property (nonatomic, strong) JH_OpenGLView *cameraView;
 @property (nonatomic, strong) JH_WifiCamera *cameraManager;
+- (void)deinitView;
+
 + (NSDictionary *)validSnapTypes;
 
 @end
