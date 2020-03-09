@@ -13,7 +13,9 @@ public class RNMicroscopeViewManager extends SimpleViewManager<JH_GLSurfaceView>
     public static final String REACT_CLASS = "RNMicroscopeView";
 
     public RNMicroscopeViewManager() {
+      wifination.naStop();
       wifination.naInit("");
+      wifination.naPlay();
     }
 
     @Override

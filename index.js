@@ -10,6 +10,7 @@ import React, { Component } from "react";
 import {
   TouchableOpacity,
   NativeModules,
+  PermissionsAndroid,
   requireNativeComponent,
   PropTypes,
   Platform,
@@ -24,6 +25,59 @@ const RNMicroscopeView = requireNativeComponent(
 );
 
 class MicroscopeView extends Component {
+
+  componentDidMount() {
+    this.requestReadExternalPermission();
+  }
+
+  async requestReadExternalPermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.READ_EXTERNAL_STORAGE,
+        {
+          title: '',
+          message:
+            '',
+          buttonNeutral: 'Ask Me Later',
+          buttonNegative: 'Cancel',
+          buttonPositive: 'OK',
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('You can use the camera');
+      } else {
+        console.log('Camera permission denied');
+      }
+      this.requestWriteExternalPermission();
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+
+  async requestWriteExternalPermission() {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+        {
+          title: '',
+          message:
+            '',
+          buttonNeutral: 'Ask Me Later',
+          buttonNegative: 'Cancel',
+          buttonPositive: 'OK',
+        },
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log('You can use the camera');
+      } else {
+        console.log('Camera permission denied');
+      }
+    } catch (err) {
+      console.warn(err);
+    }
+  }
+  
+  
   _onCapture = async () => {
     const { onCaptureSuccess, onStartCapture, onCaptureError } = this.props;
     onStartCapture && onStartCapture(new Date().getTime());
