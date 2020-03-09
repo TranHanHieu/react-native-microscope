@@ -9,6 +9,7 @@
 import React, { Component } from "react";
 import {
   TouchableOpacity,
+  NativeModules,
   requireNativeComponent,
   PropTypes,
   Platform,
@@ -17,19 +18,27 @@ import {
   Text
 } from "react-native";
 import ViewShot from "react-native-view-shot";
-
+const RNMicroscope = NativeModules.RNMicroscope;
 const RNMicroscopeView = requireNativeComponent(
   Platform.OS == "ios" ? "RNMicroscope" : "RNMicroscopeView"
 );
 
 class MicroscopeView extends Component {
-  _onCapture = () => {
+  _onCapture = async () => {
     const { onCaptureSuccess, onStartCapture, onCaptureError } = this.props;
-    onStartCapture && onStartCapture();
+    onStartCapture && onStartCapture(new Date().getTime());
+    if (Platform.OS === 'android') {
+      const url = await RNMicroscope.naSnapPhoto(new Date().getTime() + '.png');
+      setTimeout(async () => {
+        const uri = await RNMicroscope.getBase64String(`file://${url}`);
+        if (onCaptureSuccess) onCaptureSuccess(uri);
+      }, 500); // waiting save image
+      return;
+    }
     this.refs.viewShot
       .capture()
       .then(uri => {
-        if (onCaptureSuccess) onCaptureSuccess(uri);
+        if (onCaptureSuccess) onCaptureSuccess(uri?.substring(22));
       })
       .catch(e => onCaptureError && onCaptureError(e));
   };
