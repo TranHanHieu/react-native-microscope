@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name         = "RNMicroscope"
-  s.version      = "1.1.1"
+  s.version      = "1.1.3"
   s.summary      = "RNMicroscope"
   s.description  = "Connect to Digital microscope"
   s.homepage     = "https://github.com/tranhanhieu"

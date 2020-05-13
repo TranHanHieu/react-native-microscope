@@ -28,6 +28,12 @@ public class RNMicroscopeViewManager extends SimpleViewManager<JH_GLSurfaceView>
       return new JH_GLSurfaceView(context);
     }
 
+    @Override
+    public void onDropopViewInstance(@NonNull JH_GLSurfaceView view) {
+      wifination.naStop();
+      super.onDropopViewInstance(view);
+    }
+
     // @ReactProp(name = "nainit")
     // public void setNainit() {
     //     wifination.naInit("");
